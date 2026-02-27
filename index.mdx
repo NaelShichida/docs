@@ -1,97 +1,206 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
+title: "Hedgehog Edge Documentation"
+description: "Stay Sharp. Trade with Edge."
 ---
 
-## Setting up
+<img
+  src="/images/hero-dark.png"
+  alt="Hero Dark"
+  className="block dark:hidden"
+/>
+<img
+  src="/images/hero-light.png"
+  alt="Hero Light"
+  className="hidden dark:block"
+/>
 
-Get your documentation site up and running in minutes.
+## Welcome to Hedgehog Edge
+
+Institutional-grade cryptocurrency data API with **110+ technical indicators**, powered by the revolutionary **x402 payment protocol**.
+
+No subscriptions. No API keys. No credit cards. Just **autonomous, per-request payments in USDC** on Base L2.
+
+---
+
+## Get Started in Minutes
 
 <Card
-  title="Start here"
+  title="Getting Started Guide"
   icon="rocket"
-  href="/quickstart"
+  href="/GETTING-STARTED"
   horizontal
 >
-  Follow our three step quickstart guide.
+  Learn how to connect to the API and fetch your first dataset with x402
+  payments
 </Card>
 
-## Make it yours
+---
 
-Design a docs site that looks great and empowers your users.
+## What Makes Hedgehog Edge Different?
 
 <Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
+  <Card title="🤖 AI-Native Payments" icon="robot">
+    Autonomous agents can pay for data independently using x402 protocol - no
+    human intervention needed
   </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
+  <Card title="💰 Pay Per Request" icon="coins">
+    Only pay for the exact data you request. No subscriptions, no unused quota,
+    no waste
   </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
+  <Card title="⚡ Instant Settlement" icon="bolt">
+    USDC payments on Base L2 settle in seconds with minimal gas fees
   </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
+  <Card title="🔐 No API Keys" icon="shield-check">
+    No credentials to manage or secure. Your wallet is your identity
   </Card>
 </Columns>
 
-## Create beautiful pages
+---
 
-Everything you need to create world-class documentation.
+## Comprehensive Technical Analysis
 
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
+Access **110+ pre-calculated technical indicators** including:
+
+<Columns cols={3}>
+  <Card title="Moving Averages" icon="chart-line">
+    SMA, EMA (9, 20, 50, 100, 200 periods) plus Bitcoin-specific 2-year MAs
   </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
+  <Card title="Ichimoku Cloud" icon="cloud">
+    Complete Ichimoku suite with standard & alternate settings, plus projected
+    clouds
   </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
+  <Card title="Momentum Indicators" icon="gauge-high">
+    RSI, MACD, ADX with pre-calculated signals and cross alerts
   </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
+  <Card title="Volatility Bands" icon="arrows-left-right">
+    Bollinger Bands with squeeze detection and ATR/NATR
+  </Card>
+  <Card title="Heiken Ashi" icon="candle-holder">
+    Smoothed candlesticks for clearer trend identification
+  </Card>
+  <Card title="Signal Detection" icon="bell">
+    Pre-calculated crosses, breakouts, and pattern signals
   </Card>
 </Columns>
-
-## Need inspiration?
 
 <Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
+  title="View All 110+ Indicators"
+  icon="book-open"
+  href="/INDICATOR-REFERENCE"
+  horizontal
 >
-  Browse our showcase of exceptional documentation sites.
+  Browse the complete technical indicator reference
 </Card>
+
+---
+
+## Multiple Timeframes
+
+Choose the interval that matches your trading strategy:
+
+| Interval | Best For              | Data Endpoint   |
+| -------- | --------------------- | --------------- |
+| 1 hour   | Day trading, scalping | `/api/data/1h`  |
+| 4 hours  | Swing trading         | `/api/data/4h`  |
+| 12 hours | Multi-day positions   | `/api/data/12h` |
+| 1 day    | Position trading      | `/api/data/1d`  |
+| 1 week   | Long-term investing   | `/api/data/1w`  |
+
+---
+
+## Quick Example
+
+```javascript
+const response = await api.get("https://x402.hedgehogedge.com/api/data/1h", {
+  params: {
+    symbol: "BTC/USD",
+    startDate: "2025-01-01",
+    endDate: "2025-01-02",
+    indicators: "sma20,rsi14,macd_line,bb_upper,bb_lower",
+  },
+});
+
+// Payments handled automatically by x402 SDK
+// Data returned with all requested indicators pre-calculated
+```
+
+---
+
+## Popular Trading Strategies
+
+<AccordionGroup>
+  <Accordion title="Day Trading (Scalping)" icon="bolt">
+    **Timeframe**: 1h  
+    **Indicators**: `ema9,ema12,rsi9,macd_line,macd_signal,bb_upper,bb_lower,atr14`
+    
+    Fast-moving indicators for quick entry/exit decisions
+  </Accordion>
+
+<Accordion title="Swing Trading" icon="chart-simple">
+  **Timeframe**: 4h or 1d **Indicators**:
+  `sma20,sma50,ema20,rsi14,macd_line,adx14,atr14` Medium-term trend following
+  with momentum confirmation
+</Accordion>
+
+<Accordion title="Ichimoku Specialist" icon="cloud">
+  **Timeframe**: 1d or 1w **Indicators**:
+  `tenkan_sen,kijun_sen,senkou_span_a,senkou_span_b,tk_cross_bullish,kumo_breakout_bullish`
+  Complete Ichimoku Cloud analysis with signal detection
+</Accordion>
+
+  <Accordion title="Research & Backtesting" icon="flask">
+    **Timeframe**: Any  
+    **Indicators**: `all`
+    
+    Get all 110+ indicators for comprehensive analysis
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Supported Assets
+
+Access historical data for **major cryptocurrencies** including:
+
+**Top Assets**: BTC/USD, ETH/USD, SOL/USD, BNB/USD, XRP/USD, ADA/USD, DOGE/USD  
+**DeFi**: UNI/USD, LINK/USD, AAVE/USD, MATIC/USD, AVAX/USD  
+**Layer 1s**: DOT/USD, ATOM/USD, NEAR/USD, APT/USD
+
+And many more! Test any symbol with a small date range request.
+
+---
+
+## Ready to Build?
+
+<CardGroup cols={2}>
+  <Card title="Getting Started" icon="rocket" href="/GETTING-STARTED">
+    Set up your wallet, install the x402 SDK, and fetch your first dataset
+  </Card>
+  <Card title="Indicator Reference" icon="book" href="/INDICATOR-REFERENCE">
+    Complete catalog of all 110+ technical indicators with examples
+  </Card>
+</CardGroup>
+
+---
+
+## Support & Community
+
+<CardGroup cols={2}>
+  <Card title="API Platform" icon="globe" href="https://x402.hedgehogedge.com">
+    Visit the live API platform
+  </Card>
+  <Card
+    title="Contact Support"
+    icon="envelope"
+    href="mailto:support@hedgehogedge.com"
+  >
+    Get help from our team
+  </Card>
+</CardGroup>
+
+---
+
+<Note>
+  **New to x402?** Don't worry! Our Getting Started guide walks you through
+  wallet setup, funding, and your first API request step-by-step.
+</Note>
