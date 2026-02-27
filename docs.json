@@ -7,7 +7,7 @@
     "light": "#1cfde5",
     "dark": "#06b6d4"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.webp",
   "navigation": {
     "tabs": [
       {
@@ -23,25 +23,11 @@
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "API Platform",
-          "href": "https://x402.hedgehogedge.com",
-          "icon": "chart-line"
-        },
-        {
-          "anchor": "Farcaster",
-          "href": "https://farcaster.xyz/hedgehogedge",
-          "icon": "comments"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/light.jpg",
+    "dark": "/logo/dark.jpg"
   },
   "navbar": {
     "links": [
@@ -49,12 +35,7 @@
         "label": "Support",
         "href": "mailto:support@hedgehogedge.com"
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "API Platform",
-      "href": "https://x402.hedgehogedge.com"
-    }
+    ]
   },
   "contextual": {
     "options": [

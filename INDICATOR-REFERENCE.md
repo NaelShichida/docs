@@ -80,18 +80,6 @@ These fields are **always included** in every response:
 
 **Use Cases**: Faster trend following, reduced lag compared to SMA
 
-### Long-Term Moving Averages
-
-| Indicator  | Period      | Description               |
-| ---------- | ----------- | ------------------------- |
-| `ma_2y`    | 2 years     | 2-year moving average     |
-| `ma_2y_3x` | 2 years × 3 | 2-year MA multiplied by 3 |
-| `ma_2y_5x` | 2 years × 5 | 2-year MA multiplied by 5 |
-
-**Use Cases**: Bitcoin cycle analysis, macro trend identification
-
-**Note**: May be `null` for assets without sufficient historical data.
-
 ---
 
 ## Ichimoku Cloud - Standard
@@ -473,7 +461,7 @@ indicators: "sma20,sma50,ema20,rsi14,macd_line,macd_signal,adx14,atr14";
 
 ```javascript
 // Longer-term indicators on 1d or 1w timeframe
-indicators: "sma50,sma200,ema50,ema200,golden_cross,ma_2y,adx14";
+indicators: "sma50,sma200,ema50,ema200,golden_cross,adx14";
 ```
 
 ### Ichimoku Specialist
@@ -515,7 +503,6 @@ Most indicators are calculated using these standard periods:
 
 Some indicators may return `null` when:
 
-- **Insufficient historical data**: Long-term indicators like `ma_2y` need 2+ years of data
 - **New assets**: Recently listed cryptocurrencies
 - **Data gaps**: Missing historical records
 
